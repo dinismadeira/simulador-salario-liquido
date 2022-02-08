@@ -1,0 +1,104 @@
+.App {
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.App-header {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+textarea {
+    width: 600px;
+    height: 50px;
+}
+
+table {
+    background-color: #ffffff;
+    cursor: default;
+}
+
+thead {
+    background-color: rgb(205, 205, 205);
+    border: solid 1px #000000;
+    position: sticky;
+    top: 0;
+}
+
+td, th {
+    border: solid 1px #000000;
+    padding: 3px;
+    min-width: 60px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(227, 227, 227);
+}
+
+tbody > tr:hover {
+    background-color: rgba(94, 255, 120, 0.13);
+}
+
+form {
+    margin: 10px;
+}
+
+input[type=number] {
+    width: 60px;
+    height: 20px;
+}
+
+input[type=range] {
+    width: 150px;
+}
+
+input, select {
+    margin: 5px;
+}
+
+select {
+    height: 25px;
+}
+
+label {
+    margin: 10px;
+    user-select: none;
+}
+
+form {
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.months14 {
+    color: #0000d8;
+}
+
+#reset {
+    float: right;
+}
+
+.WageCell {
+    white-space: nowrap;
+}
