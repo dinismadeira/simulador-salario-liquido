@@ -446,6 +446,8 @@ class App extends React.Component<{}, any> {
                 <Link to="/">Simulador de Salários Líquidos</Link>
                 &nbsp;-&nbsp;
                 <Link to="/about">Acerca</Link>
+                &nbsp;-&nbsp;
+                <a href="https://github.com/dinismadeira/simulador-salario-liquido" target="_blank">GitHub</a>
               </div>
             </Router>
           </header>
