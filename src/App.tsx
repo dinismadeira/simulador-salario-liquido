@@ -305,10 +305,10 @@ class App extends React.Component<{}, any> {
           <header className="App-header">
             <Router
                 basename={"simulador-salario-liquido"}>
+              <div id="title">Simulador de Salários Líquidos</div>
               <div>
                 <Switch>
                   <Route path="/">
-                    <h1>Simulador de Salários Líquidos</h1>
                     <form>
                       <div>
                         <b>Salário bruto /14</b>
@@ -443,11 +443,14 @@ class App extends React.Component<{}, any> {
                     <h1>Acerca</h1>
                   </Route>
                 </Switch>
-                <Link to="/">Simulador de Salários Líquidos</Link>
+              </div>
+              <div id="footer">
+                <Link to="/">Início</Link>
                 &nbsp;-&nbsp;
                 <Link to="/about">Acerca</Link>
                 &nbsp;-&nbsp;
-                <a href="https://github.com/dinismadeira/simulador-salario-liquido" target="_blank">GitHub</a>
+                <a href="https://github.com/dinismadeira/simulador-salario-liquido" target="_blank"
+                   rel="noreferrer">GitHub</a>
               </div>
             </Router>
           </header>

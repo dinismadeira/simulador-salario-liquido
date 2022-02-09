@@ -1,6 +1,5 @@
 .App {
     text-align: center;
-    margin-bottom: 7px;
 }
 
 .App-header {
@@ -10,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #000000;
+    color: #181818;
 }
 
 .App-link {
@@ -58,7 +57,18 @@ tbody > tr:hover {
 }
 
 form {
-    margin: 10px;
+    background-color: #ebf1ff;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #00000042;
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    margin: 15px;
 }
 
 input[type=number] {
@@ -70,25 +80,25 @@ input[type=range] {
     width: 150px;
 }
 
+input[type=button] {
+    padding: 5px;
+}
+
 input, select {
+    border: 1px solid #666666;
+    border-radius: 4px;
+    font-size: 14px;
     margin: 5px;
+    padding: 2px;
 }
 
 select {
-    height: 25px;
+    height: 26px;
 }
 
 label {
     margin: 10px;
     user-select: none;
-}
-
-form {
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    display: inline-block;
 }
 
 .months14 {
@@ -101,4 +111,26 @@ form {
 
 .WageCell {
     white-space: nowrap;
+}
+
+#title {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#footer {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#footer a {
+    color: #efefef;
+}
+
+#title, #footer {
+    background-color: #464646;
+    box-shadow: 0 0 5px 1px #00000042;
+    color: #efefef;
+    width: 100%;
 }
