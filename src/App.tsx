@@ -8,9 +8,9 @@ import Range from './Range';
 function format(n: number, precision = 0) {
   return toFixed(n, precision)
   //.replace(/(?:\.(\d+))?e\+(\d+)$/, (m, m1, m2) => m1 + "000".repeat(m2))
-  .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
-  .replace(".", ",")
-  .replace(/^(\d) (\d{3})\b/, "$1$2");
+      .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+      .replace(".", ",")
+      .replace(/^(\d) (\d{3})\b/, "$1$2");
 }
 
 // Convert number to string with given precision
@@ -91,9 +91,9 @@ function WageLine({options, value}: any) {
   const totalNet12Months = totalNet / 12;
 
   const wageValue = (n: number) => {
-    const value = options.format < 2 ? format(n, precision) : format(n / 1000, precision + 3);
-    const unit = App.UNITS[options.format];
-    return value + unit;
+    const f = App.FORMATS[options.format];
+    const value = f.base === 1 ? format(n, precision) : format(n / 1000, precision + 3);
+    return value + f.unit;
   };
 
   const wageCell = (key: string, n: number, className = "") =>
@@ -200,7 +200,15 @@ class App extends React.Component<{}, any> {
     format: 0
   };
   public static readonly INCREMENTS = [1, 5, 10, 25, 50, 100, 200, 250, 500, 1000, 10000, 100000];
-  public static readonly UNITS = [" €", "", " k€", " k", "k €", "k", ""];
+  public static readonly FORMATS = [
+    {base: 1, unit: " €"},
+    {base: 1, unit: ""},
+    {base: 3, unit: " k€"},
+    {base: 3, unit: " k"},
+    {base: 3, unit: "k €"},
+    {base: 3, unit: "k"},
+    {base: 3, unit: ""}
+  ];
 
   private static storeState(state: State) {
     const changes: State = {};
@@ -295,7 +303,8 @@ class App extends React.Component<{}, any> {
     return (
         <div className="App">
           <header className="App-header">
-            <Router>
+            <Router
+                basename={"simulador-salario-liquido"}>
               <div>
                 <Switch>
                   <Route path="/">
@@ -410,13 +419,9 @@ class App extends React.Component<{}, any> {
                               name="format"
                               value={this.state.format}
                               onChange={this.handleChange}>
-                            <option value="0">1500 €</option>
-                            <option value="1">1500</option>
-                            <option value="2">1,5 k€</option>
-                            <option value="3">1,5 k</option>
-                            <option value="4">1,5k €</option>
-                            <option value="5">1,5k</option>
-                            <option value="6">1,5</option>
+                            {App.FORMATS.map((f, i) =>
+                                <option value={i}>{(f.base === 1 ? "1500" : "1,5") + f.unit}</option>
+                            )}
                           </select>
                         </label>
                         <label>
@@ -425,11 +430,8 @@ class App extends React.Component<{}, any> {
                               name="precision"
                               value={this.state.precision}
                               onChange={this.handleChange}>
-                            <option value="-3">1000 €</option>
-                            <option value="-2">100 €</option>
-                            <option value="-1">10 €</option>
-                            <option value="0">1 €</option>
-                            <option value="2">0.01 €</option>
+                            {[-3, -2, -1, 0, 2].map(n =>
+                                <option value={n}>{toFixed(Math.pow(10, -n), n)} €</option>)}
                           </select>
                         </label>
                         <input id="reset" type="button" onClick={this.reset} value="Reiniciar"/>
