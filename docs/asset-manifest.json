@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/simulador-salario-liquido/static/css/main.5d75acc2.chunk.css",
-    "main.js": "/simulador-salario-liquido/static/js/main.a74f46d3.chunk.js",
-    "main.js.map": "/simulador-salario-liquido/static/js/main.a74f46d3.chunk.js.map",
+    "main.css": "/simulador-salario-liquido/static/css/main.455a6866.chunk.css",
+    "main.js": "/simulador-salario-liquido/static/js/main.29843fab.chunk.js",
+    "main.js.map": "/simulador-salario-liquido/static/js/main.29843fab.chunk.js.map",
     "runtime-main.js": "/simulador-salario-liquido/static/js/runtime-main.38d62885.js",
     "runtime-main.js.map": "/simulador-salario-liquido/static/js/runtime-main.38d62885.js.map",
     "static/js/2.c0c78f2e.chunk.js": "/simulador-salario-liquido/static/js/2.c0c78f2e.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.184eaef0.chunk.js": "/simulador-salario-liquido/static/js/3.184eaef0.chunk.js",
     "static/js/3.184eaef0.chunk.js.map": "/simulador-salario-liquido/static/js/3.184eaef0.chunk.js.map",
     "index.html": "/simulador-salario-liquido/index.html",
-    "static/css/main.5d75acc2.chunk.css.map": "/simulador-salario-liquido/static/css/main.5d75acc2.chunk.css.map",
+    "static/css/main.455a6866.chunk.css.map": "/simulador-salario-liquido/static/css/main.455a6866.chunk.css.map",
     "static/js/2.c0c78f2e.chunk.js.LICENSE.txt": "/simulador-salario-liquido/static/js/2.c0c78f2e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.38d62885.js",
     "static/js/2.c0c78f2e.chunk.js",
-    "static/css/main.5d75acc2.chunk.css",
-    "static/js/main.a74f46d3.chunk.js"
+    "static/css/main.455a6866.chunk.css",
+    "static/js/main.29843fab.chunk.js"
   ]
 }
