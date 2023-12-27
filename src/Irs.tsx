@@ -3,12 +3,14 @@ export default class Irs {
   static readonly SUBSISTENCE_LEVEL = 9870;
 
   static readonly LEVELS: Level[] = [
-    {tax: .145, limit: 7112},
-    {tax: .23, limit: 10732},
-    {tax: .285, limit: 20322},
-    {tax: .35, limit: 25075},
-    {tax: .37, limit: 36967},
-    {tax: .45, limit: 80882},
+    {tax: .145, limit: 7479},
+    {tax: .21, limit: 11284},
+    {tax: .265, limit: 15992},
+    {tax: .285, limit: 20700},
+    {tax: .35, limit: 26355},
+    {tax: .37, limit: 38632},
+    {tax: .435, limit: 50483},
+    {tax: .45, limit: 78834},
     {tax: .48, limit: Infinity}
   ];
 
